@@ -1,6 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import style from "./style.module.css";
+import style from "./ContactItem.module.css";
 
 export class ContactItem extends Component {
   static propTypes = {

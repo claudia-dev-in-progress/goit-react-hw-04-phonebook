@@ -1,6 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import style from "./style.module.css";
+import style from "./Filter.module.css";
 
 export class Filter extends Component {
   static propTypes = {

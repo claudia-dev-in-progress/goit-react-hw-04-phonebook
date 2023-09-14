@@ -1,6 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import { ContactItem } from "./ContactItem";
+import { ContactItem } from "../ContactItem/ContactItem";
 
 export class ContactList extends Component {
   static propTypes = {
