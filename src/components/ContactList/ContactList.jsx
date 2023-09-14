@@ -1,25 +1,22 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 import { ContactItem } from "../ContactItem/ContactItem";
 
-export class ContactList extends Component {
-  static propTypes = {
-    contacts: PropTypes.array.isRequired,
-    onDeleteContact: PropTypes.func.isRequired,
-  };
+export const ContactList = ({ contacts, onDeleteContact }) => {
+  return (
+    <ul>
+      {contacts.map((contact) => (
+        <ContactItem
+          name={contact.name}
+          number={contact.number}
+          id={contact.id}
+          onDeleteContact={onDeleteContact}
+        ></ContactItem>
+      ))}
+    </ul>
+  );
+};
 
-  render() {
-    return (
-      <ul>
-        {this.props.contacts.map((contact) => (
-          <ContactItem
-            name={contact.name}
-            number={contact.number}
-            id={contact.id}
-            onDeleteContact={this.props.onDeleteContact}
-          ></ContactItem>
-        ))}
-      </ul>
-    );
-  }
-}
+ContactList.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
+};

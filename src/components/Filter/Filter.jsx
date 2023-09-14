@@ -1,27 +1,24 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 import style from "./Filter.module.css";
 
-export class Filter extends Component {
-  static propTypes = {
-    value: PropTypes.string.isRequired,
-    onFilterChange: PropTypes.func.isRequired,
-  };
+export const Filter = ({ value, onFilterChange }) => {
+  return (
+    <>
+      <label className={style.description}>Find contacts by name</label>
+      <br />
+      <input
+        type="text"
+        name="filter"
+        value={value}
+        onChange={onFilterChange}
+        placeholder="Enter contact to search"
+        className={style.input}
+      ></input>
+    </>
+  );
+};
 
-  render() {
-    return (
-      <>
-        <label className={style.description}>Find contacts by name</label>
-        <br />
-        <input
-          type="text"
-          name="filter"
-          value={this.props.value}
-          onChange={this.props.onFilterChange}
-          placeholder="Enter contact to search"
-          className={style.input}
-        ></input>
-      </>
-    );
-  }
-}
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
+};
