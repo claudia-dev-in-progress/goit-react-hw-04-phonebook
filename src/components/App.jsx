@@ -57,7 +57,7 @@ export const App = () => {
   };
 
   return (
-    <>
+    <section className={style.container}>
       <h1 className={style.title}>Phonebook</h1>
       <ContactForm onFormSubmit={handleFormSubmit}></ContactForm>
       <h1 className={style.subtitle}>Contacts</h1>
@@ -66,6 +66,6 @@ export const App = () => {
         contacts={filterContacts()}
         onDeleteContact={handleDeleteContact}
       ></ContactList>
-    </>
+    </section>
   );
 };
