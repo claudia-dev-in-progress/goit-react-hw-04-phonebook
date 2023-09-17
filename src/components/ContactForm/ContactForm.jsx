@@ -7,12 +7,12 @@ export const ContactForm = ({ onFormSubmit }) => {
   const [number, setNumber] = useState("");
 
   const handleNameChange = (evt) => {
-    const { _, value } = evt.target;
+    const { value } = evt.target;
     setName(value);
   };
 
   const handleNumberChange = (evt) => {
-    const { _, value } = evt.target;
+    const { value } = evt.target;
     setNumber(value);
   };
 
